@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para vos ♡ — Flores Amarillas</title>
+  <meta name="description" content="Una tarjeta interactiva en pixel-art para regalar flores amarillas a alguien especial. Abrí el regalito y descubrí la sorpresa." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="./love.css" />
+</head>
+<body>
+  <div class="fx" aria-hidden="true">
+    <div class="fx__aurora"></div>
+    <div class="fx__vignette"></div>
+    <div class="fx__grain"></div>
+  </div>
+
+  <div class="rain" id="rain" aria-hidden="true"></div>
+
+  <main class="scene">
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+    <div class="stage stage--aim" id="aimStage" tabindex="0" role="application"
+         aria-label="Apuntá y lanzá una flor dorada hacia el regalo para abrirlo. Presioná espacio para lanzar.">
+
+      <div class="target" id="target">
+        <div class="envelope" aria-hidden="true">
+          <span class="envelope__flap"></span>
+          <span class="heart envelope__seal"></span>
+        </div>
+        <p class="target__label">
+          <span class="heart heart--inline"></span>
+          Flores Amarillas Para Vos
+          <span class="heart heart--inline"></span>
+        </p>
+      </div>
+
+      <div class="arrow" id="arrow" aria-hidden="true"></div>
+
+      <div class="archer" id="archer" aria-hidden="true">
+        <div class="bow" id="bow"></div>
+        <span class="nock" id="nock"></span>
+      </div>
+
+      <p class="hint" id="hint">
+        <span id="hintText">Mantené presionado y soltá para lanzar una flor</span>
+        <span class="heart heart--inline"></span>
+      </p>
+    </div>
+
+    <section class="window" id="window" aria-hidden="true">
+      <header class="titlebar">
+        <span class="titlebar__name">FLORES</span>
+        <span class="titlebar__btns">
+          <button class="winbtn" type="button" aria-label="Minimizar" tabindex="-1">&#95;</button>
+          <button class="winbtn" type="button" aria-label="Maximizar" tabindex="-1">&#9633;</button>
+          <button class="winbtn winbtn--x" type="button" id="closeBtn" aria-label="Cerrar la tarjeta">&#10005;</button>
+        </span>
+      </header>
+
+      <div class="heartrow" aria-hidden="true">
+        <span class="heart"></span><span class="hdot"></span>
+        <span class="heart"></span><span class="hdot"></span>
+        <span class="heart"></span>
+      </div>
+
+      <div class="content" id="content">
+        <h1 class="title" id="title">¡Sorpresa! 🌼 Te regalo Flores amarillas para vos  
+¿Te gustó el detalle? ♡</h1>
+        <canvas class="cat" id="cat" width="16" height="16" aria-label="Un gatito sosteniendo una flor" role="img"></canvas>
+        <div class="buttons" id="buttons">
+          <button class="btn btn--yes" type="button" id="yesBtn">SÍ</button>
+          <button class="btn btn--no"  type="button" id="noBtn">NO</button>
+        </div>
+        <p class="final" id="final" hidden>
+        Dicen que las flores amarillas representan <mark>alegría, ilusión y nuevos comienzos.</mark>
+        Espero que esta tarjetita te saque una sonrisa y te alegre el día tanto como vos alegrás el mío.
+        Feliz Día! 💛🌻
+          <span class="heart heart--inline"></span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="yt-player" id="ytPlayer"></div>
+  <button class="mute-btn" id="muteBtn" type="button" aria-label="Activar música" aria-pressed="true">🔇</button>
+  <input class="volume-slider" id="volumeSlider" type="range" min="0" max="100" value="45" aria-label="Volumen de la música" />
+
+  <script type="module" src="./love.js"></script>
+</body>
+</html>
